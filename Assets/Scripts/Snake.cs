@@ -4,6 +4,8 @@ public class Snake : MonoBehaviour
 {
 
     public GameObject prefabBody;
+    public GameObject prefabRot1;
+    public GameObject prefabRot2;
 
     float speed = 2;
 
@@ -14,8 +16,9 @@ public class Snake : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-         screenWidth = (Screen.width / (Screen.height / 30)) - 1.7f;
          screenHiegth = 30;
+         screenWidth = (Screen.width / (Screen.height / screenHiegth)) - 1.7f;
+         
         
     }
 
@@ -115,10 +118,118 @@ public class Snake : MonoBehaviour
 
         Tail t = GetComponentInChildren<Tail>();
 
-        t.transform.rotation = bb[0].transform.rotation;
+        t.transform.rotation = bb[1].transform.rotation;
         t.transform.position = bb[0].transform.position;
 
         Destroy(bb[0].gameObject);
+
+    }
+
+    public void Right(){
+        timer = 0;
+        if(headRot == 90 || headRot == 270){
+
+            Head h = GetComponentInChildren<Head>();
+
+            h.transform.rotation = Quaternion.Euler(0, 0, 0);
+
+            
+
+            if(headRot == 90)
+                Instantiate(prefabRot1, h.transform.position, Quaternion.Euler(0, 0, headRot), transform);
+            if(headRot == 270)
+                Instantiate(prefabRot2, h.transform.position, Quaternion.Euler(0, 0, headRot), transform);
+            
+            headRot = 0;
+
+            h.transform.position = new Vector3(h.transform.position.x + 3.4f,
+                                                h.transform.position.y,
+                                                h.transform.position.z);
+
+            MoveBody();
+
+
+        }
+        
+    }
+    public void Left(){
+        timer = 0;
+        if(headRot == 90 || headRot == 270){
+
+            Head h = GetComponentInChildren<Head>();
+
+            h.transform.rotation = Quaternion.Euler(0, 0, 180);
+
+            
+
+            if(headRot == 270)
+                Instantiate(prefabRot1, h.transform.position, Quaternion.Euler(0, 0, headRot), transform);
+            if(headRot == 90)
+                Instantiate(prefabRot2, h.transform.position, Quaternion.Euler(0, 0, headRot), transform);
+            
+            headRot = 180;
+
+            h.transform.position = new Vector3(h.transform.position.x - 3.4f,
+                                                h.transform.position.y ,
+                                                h.transform.position.z);
+
+            MoveBody();
+
+
+        }
+        
+    }
+    public void Up(){
+        timer = 0;
+        if(headRot == 0 || headRot == 180){
+
+            Head h = GetComponentInChildren<Head>();
+
+            h.transform.rotation = Quaternion.Euler(0, 0, 90);
+
+            
+
+            if(headRot == 180)
+                Instantiate(prefabRot1, h.transform.position, Quaternion.Euler(0, 0, headRot), transform);
+            if(headRot == 0)
+                Instantiate(prefabRot2, h.transform.position, Quaternion.Euler(0, 0, headRot), transform);
+            
+            headRot = 90;
+
+            h.transform.position = new Vector3(h.transform.position.x,
+                                                h.transform.position.y + 3.4f,
+                                                h.transform.position.z);
+
+            MoveBody();
+
+
+        }
+    }
+    public void Down(){
+        timer = 0;
+        if(headRot == 0 || headRot == 180){
+
+            Head h = GetComponentInChildren<Head>();
+
+            h.transform.rotation = Quaternion.Euler(0, 0, 270);
+
+            
+
+            if(headRot == 0)
+                Instantiate(prefabRot1, h.transform.position, Quaternion.Euler(0, 0, headRot), transform);
+            if(headRot == 180)
+                Instantiate(prefabRot2, h.transform.position, Quaternion.Euler(0, 0, headRot), transform);
+            
+            headRot = 270;
+
+            h.transform.position = new Vector3(h.transform.position.x,
+                                                h.transform.position.y - 3.4f,
+                                                h.transform.position.z);
+
+            MoveBody();
+
+
+        }
 
     }
 

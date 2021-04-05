@@ -37,9 +37,11 @@
   </PropertyGroup>
   <ItemGroup>
      <Compile Include="Assets\Scripts\Body.cs" />
+     <Compile Include="Assets\Scripts\Fence.cs" />
      <Compile Include="Assets\Scripts\Head.cs" />
      <Compile Include="Assets\Scripts\Snake.cs" />
      <Compile Include="Assets\Scripts\Tail.cs" />
+     <Compile Include="Assets\Scripts\UIPanel.cs" />
     <Reference Include="UnityEngine">
         <HintPath>C:/Program Files/2019.4.18f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
     </Reference>
