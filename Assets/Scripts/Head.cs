@@ -15,4 +15,10 @@ public class Head : MonoBehaviour
     {
         
     }
+
+    void OnTriggerEnter2D(Collider2D other){
+
+        Debug.Log("Fail");
+
+    }
 }
