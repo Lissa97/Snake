@@ -45,10 +45,17 @@ MonoBehaviour:
     y: 30
     width: 1904
     height: 931
+<<<<<<< HEAD
   m_MinSize: {x: 679, y: 342}
   m_MaxSize: {x: 12004, y: 8042}
   vertical: 0
   controlID: 101
+=======
+  m_MinSize: {x: 679, y: 492}
+  m_MaxSize: {x: 14002, y: 14042}
+  vertical: 0
+  controlID: 120
+>>>>>>> Lesson2
 --- !u!114 &3
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -120,9 +127,15 @@ MonoBehaviour:
     y: 580
     width: 1374
     height: 351
+<<<<<<< HEAD
   m_MinSize: {x: 101, y: 121}
   m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 18}
+=======
+  m_MinSize: {x: 231, y: 271}
+  m_MaxSize: {x: 10001, y: 10021}
+  m_ActualView: {fileID: 13}
+>>>>>>> Lesson2
   m_Panes:
   - {fileID: 13}
   - {fileID: 18}
@@ -216,8 +229,13 @@ MonoBehaviour:
     y: 0
     width: 1374
     height: 931
+<<<<<<< HEAD
   m_MinSize: {x: 403, y: 342}
   m_MaxSize: {x: 8003, y: 8042}
+=======
+  m_MinSize: {x: 403, y: 492}
+  m_MaxSize: {x: 10001, y: 14042}
+>>>>>>> Lesson2
   vertical: 1
   controlID: 39
 --- !u!114 &10
@@ -264,8 +282,13 @@ MonoBehaviour:
     y: 0
     width: 1120
     height: 580
+<<<<<<< HEAD
   m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 4000, y: 4000}
+=======
+  m_MinSize: {x: 202, y: 221}
+  m_MaxSize: {x: 4002, y: 4021}
+>>>>>>> Lesson2
   m_ActualView: {fileID: 17}
   m_Panes:
   - {fileID: 16}
@@ -540,9 +563,15 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
+<<<<<<< HEAD
       m_SelectedIDs: 463c0000
       m_LastClickedID: 15430
       m_ExpandedIDs: 6ae3ffffeae7ffffbcf8ffff8afaffff3700000066390000463c0000
+=======
+      m_SelectedIDs: 2a390000
+      m_LastClickedID: 14634
+      m_ExpandedIDs: d8f9ffff64fbffff2a390000
+>>>>>>> Lesson2
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -587,10 +616,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 256
-    y: 73
-    width: 1128
-    height: 569
+    x: 262
+    y: 81
+    width: 1118
+    height: 559
   m_ViewDataDictionary: {fileID: 0}
   m_ShowContextualTools: 0
   m_WindowGUID: f37bd730545d9e64b844d037a98a49f3
@@ -715,7 +744,11 @@ MonoBehaviour:
   m_ShowGizmos: 0
   m_TargetDisplay: 0
   m_ClearColor: {r: 0, g: 0, b: 0, a: 0}
+<<<<<<< HEAD
   m_TargetSize: {x: 672, y: 538}
+=======
+  m_TargetSize: {x: 807, y: 538}
+>>>>>>> Lesson2
   m_TextureFilterMode: 0
   m_TextureHideFlags: 61
   m_RenderIMGUI: 1
@@ -724,14 +757,19 @@ MonoBehaviour:
   m_VSyncEnabled: 0
   m_Gizmos: 0
   m_Stats: 0
-  m_SelectedSizes: 01000000000000000000000004000000000000000000000000000000000000000000000000000000
+  m_SelectedSizes: 03000000000000000000000004000000000000000000000000000000000000000000000000000000
   m_ZoomArea:
     m_HRangeLocked: 0
     m_VRangeLocked: 0
     hZoomLockedByDefault: 0
     vZoomLockedByDefault: 0
+<<<<<<< HEAD
     m_HBaseRangeMin: -336
     m_HBaseRangeMax: 336
+=======
+    m_HBaseRangeMin: -403.5
+    m_HBaseRangeMax: 403.5
+>>>>>>> Lesson2
     m_VBaseRangeMin: -269
     m_VBaseRangeMax: 269
     m_HAllowExceedBaseRangeMin: 1
