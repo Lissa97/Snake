@@ -1,24 +1,23 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class Head : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
+    
+    public Score score;
+    public Snake snake;
+    public GameController GC;
+    
     void OnTriggerEnter2D(Collider2D other){
 
-        Debug.Log("Fail");
+        if(other.tag == "Frute"){
+            snake.Eat();
+            score.UpScore();
+        }
+        else
+         GC.GameReload();
+            
 
     }
 }

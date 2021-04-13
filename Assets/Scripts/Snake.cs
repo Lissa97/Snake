@@ -7,10 +7,14 @@ public class Snake : MonoBehaviour
     public GameObject prefabRot1;
     public GameObject prefabRot2;
 
+    
+
     float speed = 2;
 
     float screenWidth = 0;
     float screenHiegth = 0;
+
+    bool is_eaten = false;
 
     int headRot = 0;
     // Start is called before the first frame update
@@ -33,6 +37,7 @@ public class Snake : MonoBehaviour
         
     }
 
+    
     void Move (){
 
         Head h = GetComponentInChildren<Head>();
@@ -50,7 +55,7 @@ public class Snake : MonoBehaviour
 
             
             
-            MoveBody();
+           MoveBody();
 
 
         }
@@ -110,25 +115,63 @@ public class Snake : MonoBehaviour
 
     }
 
+    public void Reload(){
+        headRot = 0;
+        Head h = GetComponentInChildren<Head>();
+        h.transform.position = new Vector3(3.4f, 0, 0);
+        h.transform.rotation = Quaternion.Euler(0, 0, 0);
+
+        Tail t = GetComponentInChildren<Tail>();
+        t.transform.position = new Vector3(-6.8f, 0, 0);
+        t.transform.rotation = Quaternion.Euler(0, 0, 0);
+
+        var bb = GetComponentsInChildren<Body>();
+
+        foreach(var b in bb){
+            Destroy(b.gameObject);
+        }
+
+        Instantiate(prefabBody, new Vector3(-3.4f, 0, 0), Quaternion.identity, transform);
+        Instantiate(prefabBody, new Vector3(0    , 0, 0), Quaternion.identity, transform);
+    }
+
+    public void Eat(){
+        is_eaten = true;
+    }
+
     void MoveBody(){
 
-        Body[] bb = GetComponentsInChildren<Body>();
+
+        if(!is_eaten){
+
+        
+            Body[] bb = GetComponentsInChildren<Body>();
 
             
 
-        Tail t = GetComponentInChildren<Tail>();
+            Tail t = GetComponentInChildren<Tail>();
 
-        t.transform.rotation = bb[1].transform.rotation;
-        t.transform.position = bb[0].transform.position;
+            t.transform.rotation = bb[1].transform.rotation;
+            t.transform.position = bb[0].transform.position;
 
-        Destroy(bb[0].gameObject);
+            Destroy(bb[0].gameObject);
+        }
+        else
+            is_eaten = false;
+
+
+        
 
     }
 
+
+
     public void Right(){
         timer = 0;
+
         if(headRot == 90 || headRot == 270){
 
+            
             Head h = GetComponentInChildren<Head>();
 
             h.transform.rotation = Quaternion.Euler(0, 0, 0);
